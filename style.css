@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #fffafc;
+  background: #ffd9e8;
   color: #333;
   text-align: center;
   min-height: 100vh;
@@ -226,6 +226,109 @@ h2 {
 .timeline-content p {
   color: #333;
 }
+.spotify-card {
+  display: flex;
+  align-items: center;
+  background: #181818;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 2rem auto;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.album-cover {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.track-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.song-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1db954;
+}
+
+.artist-name {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  margin: 0;
+}
+
+.track-info audio {
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+.card-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+.title-con{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 100px;
+}
+.title-con2{
+  padding-left: 200px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.snow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+.timeline-container{
+  background-image: url(/img/background.jpg);
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(300px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.spotify-card {
+  position: relative;
+  overflow: hidden;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -280,6 +383,11 @@ h2 {
     width: 150px;
     height: 200px;
   }
+  .timeline-content .convo{
+    width: 300px;
+    height: 210px;
+    border-radius: 10px;
+  }
   
   h2 {
       font-size: 1.125rem;
@@ -307,3 +415,149 @@ h2 {
       padding: 0.8rem;
   }
 }
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #ff6f91;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff6f91;
+  }
+  100% {
+    box-shadow: 0 0 5px #ff6f91;
+  }
+}
+
+/* === Applied Animations === */
+.timer,
+.timeline,
+#loveLetter,
+.timeline-item,
+.mem-track img {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.timeline-content {
+  animation: slideInLeft 1s ease-out;
+}
+
+.mem-track img:hover,
+.timeline-content img:hover,
+.spotify-card:hover {
+  animation: glow 2s infinite;
+  transform: scale(1.02);
+}
+
+/* === Mobile View Adjustments (Max width: 480px) === */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  #days {
+    font-size: 2.5rem;
+  }
+
+  .timer {
+    padding: 1rem;
+    width: 95%;
+    max-width: 400px;
+  }
+
+  .htoo img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .timeline {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .timeline-content {
+    padding: 0.8rem;
+    margin: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .timeline-content .convo {
+    width: 100%;
+    height: auto;
+  }
+
+  .timeline-content img,
+  .timeline-content .first_date {
+    width: 100%;
+    height: auto;
+  }
+
+  .spotify-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .album-cover {
+    width: 100%;
+    height: auto;
+  }
+
+  .track-info audio {
+    width: 100%;
+  }
+
+  .card-container {
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1rem;
+  }
+
+  .title-con {
+    padding: 0;
+    text-align: center;
+  }
+
+  .title-con2 {
+    padding: 0;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  #passwordForm input {
+    width: 70%;
+    margin: 0.5rem 0;
+  }
+
+  #passwordForm button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+

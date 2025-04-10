@@ -19,3 +19,37 @@ function unlockLetter() {
     errorMessage.style.display = "block";  // Show error message
   }
 }
+
+const song = document.getElementById("loveSong");
+const snowContainer = document.querySelector(".snow-container");
+let snowInterval;
+
+function createSnowflake() {
+  const snowflake = document.createElement("div");
+  snowflake.classList.add("snowflake");
+  
+  snowflake.style.left = Math.random() * 100 + "%";
+  snowflake.style.animationDuration = 2 + Math.random() * 3 + "s";
+  snowflake.style.opacity = Math.random();
+  snowflake.style.transform = `scale(${Math.random() + 0.5})`;
+  
+  snowContainer.appendChild(snowflake);
+
+  setTimeout(() => {
+    snowflake.remove();
+  }, 5000);
+}
+
+function startSnow() {
+  snowInterval = setInterval(createSnowflake, 200);
+}
+
+function stopSnow() {
+  clearInterval(snowInterval);
+  snowContainer.innerHTML = "";
+}
+
+song.addEventListener("play", startSnow);
+song.addEventListener("pause", stopSnow);
+song.addEventListener("ended", stopSnow);
+

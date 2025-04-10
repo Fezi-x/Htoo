@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Love Days ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-    <div class="timer"> 
-        <h1>💖 Koko & Htoo 💖</h1>
-        <h2>We've been together for</h2>
-        <div id="days">0</div>
-        <p>Since July 18, 2023</p>
+  <div class="container">
+    <div class="timer">
+      <h1>💖 Koko & Htoo 💖</h1>
+      <h2>We've been together for</h2>
+      <div id="days">0</div>
+      <p>Since July 18, 2023</p>
     </div>
-</div>
-<div class="mem">
+  </div>
+  <div class="mem">
     <div class="mem-track">
       <img src="/img/fingers.jpg" alt="Memory 1">
       <img src="/img/first_flower.jpg" alt="Memory 2">
@@ -24,7 +26,7 @@
       <img src="/img/mario.jpg" alt="Memory 5">
       <img src="/img/jardin.jpg" alt="Memory 6">
       <img src="/img/miu.jpg" alt="Memory 7">
-  
+
       <!-- Duplicate for smooth loop -->
       <img src="/img/fingers.jpg" alt="Memory 1 Copy">
       <img src="/img/first_flower.jpg" alt="Memory 2 Copy">
@@ -35,88 +37,146 @@
       <img src="/img/miu.jpg" alt="Memory 7 Copy">
     </div>
   </div>
-<div class="love-con">
+  <div class="love-con">
     <div id="loveLetter" class="hidden">
-        <div class="letter-box">
-          <h3>💌 A Special Message for You 💌</h3>
-          <p>Babe lay ko koko amyar g chit tl amyar gyi ll myat noe dl. Amyar gyi ll sat chit twar chin dl babe htet po p kg dk main kaly so dr ma shi nai dok buu kokoh kaly lay</p>
-          <p>Love you so much & miss you so much babe ❤️</p>
+      <div class="letter-box">
+        <h3>💌 A Special Message for You 💌</h3>
+        <p>Babe lay ko koko amyar g chit tl amyar gyi ll myat noe dl. Amyar gyi ll sat chit twar chin dl babe htet po p
+          kg dk main kaly so dr ma shi nai dok buu kokoh kaly lay</p>
+        <p>Love you so much & miss you so much babe ❤️</p>
+      </div>
+    </div>
+
+    <div id="passwordForm">
+      <input type="password" id="passwordInput" placeholder="Password Htae....">
+      <button onclick="unlockLetter()">Unlock Love Letter</button>
+      <p id="errorMessage" style="color: red; display: none;">Mhar nay dl!!!!</p>
+    </div>
+
+    <div class="htoo">
+      <img src="/img/cute sticker.png">
+    </div>
+  </div>
+
+  <div class="timeline-container">
+    <div class="timeline">
+      <h2>💫 Our Firsts Timeline 💫</h2>
+      <div class="timeline-item">
+        <div class="timeline-date">July 8, 2023</div>
+        <div class="timeline-content">
+          <h3>First conversation</h3>
+          <img src="/img/first_convo.png" alt="first_conversation" class="convo">
+          <p>Sar lar may tk kg ma lay</p>
         </div>
       </div>
-      
-      <div id="passwordForm">
-        <input type="password" id="passwordInput" placeholder="Password Htae....">
-        <button onclick="unlockLetter()">Unlock Love Letter</button>
-        <p id="errorMessage" style="color: red; display: none;">Mhar nay dl!!!!</p>
-      </div>
-      
-    <div class="htoo">
-        <img src="/img/cute sticker.png">
-    </div>
-</div>
 
+      <div class="timeline-item">
+        <div class="timeline-date">July 15, 2023</div>
+        <div class="timeline-content">
+          <h3>First Photo</h3>
+          <img src="/img/first_photo.jpg" alt="first_photo">
+          <p>First Photo from you. Happy Birthdayy</p>
 
-<div class="timeline">
-    <h2>💫 Our Firsts Timeline 💫</h2>
-    <div class="timeline-item">
-      <div class="timeline-date">July 8, 2023</div>
-      <div class="timeline-content">
-        <h3>First conversation</h3>
-        <img src="/img/first_convo.png" alt="first_conversation" class="convo">
-        <p>Sar lar may tk kg ma lay</p>
+        </div>
       </div>
-    </div>
-  
-    <div class="timeline-item">
-      <div class="timeline-date">July 15, 2023</div>
-      <div class="timeline-content">
-        <h3>First Photo</h3>
-        <img src="/img/first_photo.jpg" alt="first_photo">
-        <p>First Photo from you. Happy Birthdayy</p>
-        
+
+      <div class="timeline-item">
+        <div class="timeline-date">July 17, 2023</div>
+        <div class="timeline-content">
+          <h3>First Flowers</h3>
+          <img src="/img/first_flower.jpg" alt="first_flower">
+          <p>Birthday Present, First Flowers</p>
+        </div>
       </div>
-    </div>
-  
-    <div class="timeline-item">
-      <div class="timeline-date">July 17, 2023</div>
-      <div class="timeline-content">
-        <h3>First Flowers</h3>
-        <img src="/img/first_flower.jpg" alt="first_flower">
-        <p>Birthday Present, First Flowers</p>
+
+      <div class="timeline-item">
+        <div class="timeline-date">July 17, 2023</div>
+        <div class="timeline-content">
+          <h3>First Dates</h3>
+          <img src="/img/first_date.jpg" alt="first_date" class="first_date">
+          <p>First date and we talked for a long time. Getting to know you.</p>
+          <p>📍Barica Coffee</p>
+        </div>
       </div>
-    </div>
-  
-    <div class="timeline-item">
-      <div class="timeline-date">July 17, 2023</div>
-      <div class="timeline-content">
-        <h3>First Dates</h3>
-        <img src="/img/first_date.jpg" alt="first_date" class="first_date">
-        <p>First date and we talked for a long time. Getting to know you.</p>
-        <p>📍Barica Coffee</p>
+
+      <div class="timeline-item">
+        <div class="timeline-date"></div>
+        <div class="timeline-content">
+          <h3>First Movie</h3>
+          <img src="/img/first_movie.jpg" alt="first_moive">
+          <p>Tha Yal kar twar kyi dk amat ta ya lay par hehe</p>
+          <p>📍Junction Squre JCGV</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="timeline-item">
-    <div class="timeline-date"></div>
-    <div class="timeline-content">
-      <h3>First Movie</h3>
-      <img src="/img/first_movie.jpg" alt="first_date" class="first_date">
-      <p>Tha Yal kar twar kyi dk amat ta ya lay par hehe</p>
-      <p>📍Junction Squre JCGV</p>
+
+  </div>
+  <div class="card-container">
+    <div class="spotify-card">
+      <img src="/img/christmas.jpg" alt="Memory Photo" class="album-cover">
+
+      <div class="track-info">
+        <h4 class="song-title">Last Christmas</h4>
+        <p class="artist-name">Wham!</p>
+
+        <audio controls>
+          <source src="/songs/LastChristmas.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="snow-container"></div>
+    </div>
+    <div class="title-con">
+      <p>📍BreadTalk Myanmar Plaza</p>
+      <p>📅25 Oct, 2023</p>
+      <p>❤️Christmas day, BreadTalk mr Last Chritmas lay nk sakr htai pyw sin ka</p>
     </div>
   </div>
-</div>
-  
-  
-  
-  
-  
 
-  
- 
+  <div class="card-container">
+    <div class="title-con">
+    </div>
+    <div class="spotify-card">
+      <img src="/img/foots.jpg" alt="Memory Photo" class="album-cover">
+
+      <div class="track-info">
+        <h4 class="song-title">For ya</h4>
+        <p class="artist-name">蒋小呢</p>
+
+        <audio controls>
+          <source src="/songs/For ya.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="snow-container"></div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="title-con2">
+      <p>Miss you so much babe❤️</p>
+    </div>
+    <div class="spotify-card">
+      <img src="/img/hand.jpg" alt="Memory Photo" class="album-cover">
+
+      <div class="track-info">
+        <h4 class="song-title">A Lwan Pyay Anan</h4>
+        <p class="artist-name">Bunny Phyo</p>
+
+        <audio controls>
+          <source src="/songs/bunnyphyo.m4a" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="snow-container"></div>
+    </div>
+  </div>
+
 
 
   <script src="script.js"></script>
 </body>
+
 </html>
